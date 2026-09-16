@@ -285,6 +285,7 @@ a:hover .arrow--right { transform: translateX(3px); }
   gap: 20px 56px;
   margin-bottom: clamp(32px, 5vw, 56px);
 }
+.section-head--top { align-items: start; }
 .section-head h2 { margin-top: 14px; font-size: clamp(36px, 5.2vw, 60px); }
 .section-head p:not(.eyebrow) { color: var(--ink-2); }
 .section-head p + p { margin-top: 12px; }
@@ -446,22 +447,20 @@ a:hover .arrow--right { transform: translateX(3px); }
 
 /* ---------- youtube ---------- */
 
-.yt { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
-.yt h2 { margin-top: 14px; font-size: clamp(36px, 5.2vw, 60px); }
-.yt-copy p:not(.eyebrow) { margin-top: 20px; color: var(--ink-2); }
-.yt-stats { display: flex; gap: 32px; margin: 28px 0 32px; }
+.yt-stats { display: flex; gap: 32px; margin: 24px 0 28px; }
 .yt-stats b { display: block; font: 800 30px/1 var(--font-display); letter-spacing: -0.02em; }
 .yt-stats span { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-3); }
 
-.shorts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-.short-title { margin-top: 10px; font-size: 13px; line-height: 1.35; color: var(--ink); }
+.shorts { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px 14px; }
+.short-title { margin-top: 10px; font-size: 13.5px; line-height: 1.35; color: var(--ink); }
 .short-views { margin-top: 3px; font: 12px var(--font-mono); color: var(--ink-3); }
+.yt-lite.is-playing .card-tag { display: none; }
 
 @media (max-width: 900px) {
-  .yt { grid-template-columns: 1fr; }
+  .shorts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
-  .shorts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+  .shorts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
 }
 
 /* ---------- about ---------- */
@@ -492,6 +491,7 @@ a:hover .arrow--right { transform: translateX(3px); }
 
 .contact { text-align: left; }
 .contact h2 { margin-top: 14px; max-width: 16em; font-size: clamp(34px, 5vw, 58px); }
+.contact-lede { margin-top: 18px; max-width: 34em; font-size: 17px; color: var(--ink-2); }
 .contact-mail {
   display: inline-block;
   margin-top: 36px;
