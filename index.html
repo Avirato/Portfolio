@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liam Berg — 3D Environment Artist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #17181B;
+    --bg-raised: #1E2023;
+    --line: #2E3136;
+    --ink: #EDEDEA;
+    --ink-dim: #9A9C9F;
+    --amber: #E8A33D;
+    --amber-dim: #6B5228;
+    --max: 1180px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Archivo', sans-serif;
+    margin:0;
+    line-height:1.05;
+  }
+
+  a { color:inherit; }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(23,24,27,0.9);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:18px; padding-bottom:18px;
+  }
+  .nav-name{
+    font-family:'Archivo', sans-serif;
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:0.01em;
+  }
+  .nav-links{
+    display:flex; gap:28px; list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    text-decoration:none;
+    font-size:14px;
+    color:var(--ink-dim);
+    transition:color 0.15s ease;
+  }
+  .nav-links a:hover{ color:var(--ink); }
+
+  /* ---------- hero ---------- */
+  header.hero{
+    padding:96px 0 72px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:56px;
+    align-items:end;
+  }
+  .hero h1{
+    font-size:clamp(40px, 5.5vw, 68px);
+    font-weight:900;
+    letter-spacing:-0.01em;
+  }
+  .hero .role{
+    margin-top:18px;
+    font-size:19px;
+    color:var(--ink-dim);
+    max-width:46ch;
+  }
+  .hero .role strong{ color:var(--ink); font-weight:500; }
+  .hero-meta{
+    display:flex; flex-direction:column; gap:14px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:13px;
+    color:var(--ink-dim);
+    padding-bottom:6px;
+  }
+  .hero-meta span{ color:var(--ink); }
+  .hero-cta{
+    margin-top:32px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:2px;
+    font-size:14px;
+    font-weight:500;
+    text-decoration:none;
+    border:1px solid transparent;
+    transition:opacity 0.15s ease;
+  }
+  .btn-fill{ background:var(--amber); color:#1A1300; }
+  .btn-line{ border-color:var(--line); color:var(--ink); }
+  .btn:hover{ opacity:0.85; }
+
+  /* ---------- section shell ---------- */
+  section{ padding:88px 0; border-bottom:1px solid var(--line); }
+  .section-head{
+    display:flex; justify-content:space-between; align-items:baseline;
+    margin-bottom:52px;
+    gap:24px; flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-size:30px; font-weight:700;
+  }
+  .section-head p{
+    color:var(--ink-dim);
+    max-width:38ch;
+    margin:0;
+    font-size:15px;
+  }
+
+  /* ---------- projects ---------- */
+  .project{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:48px;
+    padding:56px 0;
+    border-top:1px solid var(--line);
+    align-items:center;
+  }
+  .project:first-of-type{ border-top:none; padding-top:0; }
+  .project.reverse .project-media{ order:2; }
+  .project.reverse .project-copy{ order:1; }
+
+  .project-media{
+    aspect-ratio:4/3;
+    background:linear-gradient(135deg, var(--bg-raised), #26282C);
+    border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .project-media .ph-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-dim);
+    text-align:center;
+    padding:20px;
+  }
+  .project-media::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      linear-gradient(var(--line) 1px, transparent 1px) 0 0/100% 33.3%,
+      linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/33.3% 100%;
+    opacity:0.35;
+  }
+
+  .project-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--amber);
+  }
+  .project-copy h3{
+    font-size:24px;
+    margin-top:10px;
+    font-weight:700;
+  }
+  .project-copy .project-desc{
+    color:var(--ink-dim);
+    margin-top:14px;
+    font-size:15px;
+    max-width:48ch;
+  }
+  .project-specs{
+    display:flex; flex-wrap:wrap; gap:10px;
+    margin-top:20px;
+  }
+  .project-specs span{
+    font-size:12px;
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink-dim);
+    border:1px solid var(--line);
+    padding:5px 10px;
+  }
+  .project-copy .project-link{
+    display:inline-block;
+    margin-top:22px;
+    font-size:14px;
+    color:var(--ink);
+    border-bottom:1px solid var(--amber);
+    padding-bottom:2px;
+    text-decoration:none;
+  }
+
+  /* ---------- about / skills ---------- */
+  #about .wrap{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:64px;
+  }
+  #about p{
+    color:var(--ink-dim);
+    font-size:16px;
+    max-width:52ch;
+  }
+  #about p + p{ margin-top:16px; }
+  .skill-group{ margin-bottom:24px; }
+  .skill-group h4{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-dim);
+    font-weight:400;
+    margin-bottom:10px;
+  }
+  .skill-group .items{
+    font-size:15px;
+    color:var(--ink);
+  }
+
+  /* ---------- contact ---------- */
+  #contact{ border-bottom:none; padding-bottom:96px; }
+  #contact .wrap{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:32px;
+  }
+  #contact h2{
+    font-size:34px;
+    max-width:14ch;
+  }
+  .contact-links{
+    display:flex; flex-direction:column; gap:10px;
+    font-size:15px;
+  }
+  .contact-links a{ text-decoration:none; color:var(--ink-dim); }
+  .contact-links a:hover{ color:var(--amber); }
+
+  footer{
+    padding:28px 0 40px;
+    font-size:13px;
+    color:var(--ink-dim);
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  @media (max-width: 760px){
+    .hero-grid{ grid-template-columns:1fr; gap:32px; }
+    .project, .project.reverse{ grid-template-columns:1fr; }
+    .project.reverse .project-media, .project.reverse .project-copy{ order:0; }
+    #about .wrap{ grid-template-columns:1fr; }
+    .wrap{ padding:0 20px; }
+    section{ padding:64px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name">LIAM BERG</div>
+    <ul class="nav-links">
+      <li><a href="#work">Arbete</a></li>
+      <li><a href="#about">Om mig</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>3D artist som bygger världar man vill gå in i.</h1>
+      <p class="role">3D-generalist och <strong>environment artist</strong> från Stockholm, inriktad på hårdyte-miljöer, PC-optimerade spelassets och realtidsrendering.</p>
+      <div class="hero-cta">
+        <a class="btn btn-fill" href="#work">Se arbete</a>
+        <a class="btn btn-line" href="#contact">Kontakta mig</a>
+      </div>
+    </div>
+    <div class="hero-meta">
+      <div>Bas <span>Stockholm, Sverige</span></div>
+      <div>Utbildning <span>Visual Magic</span></div>
+      <div>Verktyg <span>Blender · Maya · Substance · Unity · Unreal</span></div>
+      <div>Söker <span>Junior-roller, spel &amp; XR</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Utvalda projekt</h2>
+      <p>Ett urval av miljöer, props och tillgångar byggda för shipping, prototyper och marknadsplatser.</p>
+    </div>
+
+    <div class="project">
+      <div class="project-media">
+        <div class="ph-label">[ BYT UT — bild/skärmdump<br>Project Solar ]</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-tag">Co-op / Steam</div>
+        <h3>Project Solar</h3>
+        <p class="project-desc">Hårdyte-miljökonstnär på ett litet indiestudio. Byggde byggnader och props anpassade efter studions befintliga trimsheet och arbetsflöde för ett co-op-spel släppt på Steam.</p>
+        <div class="project-specs">
+          <span>Hardsurface</span>
+          <span>Trimsheet workflow</span>
+          <span>Blender → Unity</span>
+        </div>
+        <a class="project-link" href="#">Se på Steam →</a>
+      </div>
+    </div>
+
+    <div class="project reverse">
+      <div class="project-media">
+        <div class="ph-label">[ BYT UT — bild/skärmdump<br>Casino Asset Pack ]</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-tag">Fab Marketplace</div>
+        <h3>Casino Environment Asset Pack</h3>
+        <p class="project-desc">En 3D-tillgångspaket med casinomiljöer under förberedelse för Fab-marknadsplatsen — modulära props och material byggda för snabb ihopsättning av interiörer.</p>
+        <div class="project-specs">
+          <span>Modular kit</span>
+          <span>PBR-material</span>
+          <span>Fab / Unreal</span>
+        </div>
+        <a class="project-link" href="#">Kommer snart</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <div class="project-media">
+        <div class="ph-label">[ BYT UT — bild/skärmdump<br>Golf Tycoon ]</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-tag">Mobile / Google Play</div>
+        <h3>Golf Tycoon</h3>
+        <p class="project-desc">Golf tycoon-spel för mobil, publicerat på Google Play. Eget indieprojekt från idé till publicering, inklusive spelmekanik och visuell stil.</p>
+        <div class="project-specs">
+          <span>Indie / solo</span>
+          <span>Mobile</span>
+          <span>Published</span>
+        </div>
+        <a class="project-link" href="#">Öppna på Google Play →</a>
+      </div>
+    </div>
+
+    <div class="project reverse">
+      <div class="project-media">
+        <div class="ph-label">[ BYT UT — lägg till<br>ditt nästa projekt här ]</div>
+      </div>
+      <div class="project-copy">
+        <div class="project-tag">—</div>
+        <h3>Nästa projekt</h3>
+        <p class="project-desc">Duplicera ett av blocken ovan i HTML-koden för att lägga till fler projekt. Byt ut platshållartext, bild och specs.</p>
+        <div class="project-specs">
+          <span>Lägg till taggar</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div>
+      <h2 style="font-size:30px; margin-bottom:24px;">Om mig</h2>
+      <p>Jag är en 3D-generalist och environment artist baserad i Stockholm, utbildad vid Visual Magic. Jag gillar särskilt hårdyte-modellering och att bygga miljöer som känns trovärdiga i realtidsmotorer — allt från props till kompletta scener.</p>
+      <p>Vid sidan av kontraktsarbete driver jag egna indiespel, med publicerade titlar på Google Play, och bygger just nu ett 3D-tillgångspaket för Fab-marknadsplatsen. Jag söker just nu junior-roller i Stockholms spel- och XR-scen, med särskilt intresse för iGaming/casino-studior.</p>
+    </div>
+    <div>
+      <div class="skill-group">
+        <h4>3D &amp; RENDERING</h4>
+        <div class="items">Blender, Maya, Substance Painter/Designer</div>
+      </div>
+      <div class="skill-group">
+        <h4>MOTORER</h4>
+        <div class="items">Unity, Unreal Engine</div>
+      </div>
+      <div class="skill-group">
+        <h4>2D &amp; POST</h4>
+        <div class="items">Photoshop, Nuke</div>
+      </div>
+      <div class="skill-group">
+        <h4>ÖVRIGT</h4>
+        <div class="items">Videoredigering, indieutveckling, publicering</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Bygger just nu — hör av dig.</h2>
+    <div class="contact-links">
+      <a href="mailto:din@epost.se">din@epost.se</a>
+      <a href="#">ArtStation →</a>
+      <a href="#">LinkedIn →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Liam Berg — byggd med HTML/CSS, hostad på GitHub Pages</div>
+</footer>
+
+</body>
+</html>
