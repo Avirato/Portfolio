@@ -285,7 +285,6 @@ a:hover .arrow--right { transform: translateX(3px); }
   gap: 20px 56px;
   margin-bottom: clamp(32px, 5vw, 56px);
 }
-.section-head--top { align-items: start; }
 .section-head h2 { margin-top: 14px; font-size: clamp(36px, 5.2vw, 60px); }
 .section-head p:not(.eyebrow) { color: var(--ink-2); }
 .section-head p + p { margin-top: 12px; }
@@ -451,14 +450,11 @@ a:hover .arrow--right { transform: translateX(3px); }
 .yt-stats b { display: block; font: 800 30px/1 var(--font-display); letter-spacing: -0.02em; }
 .yt-stats span { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-3); }
 
-.shorts { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px 14px; }
+.shorts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 14px; }
 .short-title { margin-top: 10px; font-size: 13.5px; line-height: 1.35; color: var(--ink); }
 .short-views { margin-top: 3px; font: 12px var(--font-mono); color: var(--ink-3); }
 .yt-lite.is-playing .card-tag { display: none; }
 
-@media (max-width: 900px) {
-  .shorts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
 @media (max-width: 560px) {
   .shorts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; }
 }
