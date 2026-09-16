@@ -3,6 +3,7 @@
   'use strict';
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sv = document.documentElement.lang === 'sv';
 
   // Solid nav background once the page is scrolled (project pages start solid).
   var nav = document.querySelector('.site-nav');
@@ -57,8 +58,8 @@
   box.className = 'lightbox';
   box.setAttribute('role', 'dialog');
   box.setAttribute('aria-modal', 'true');
-  box.setAttribute('aria-label', 'Image viewer');
-  box.innerHTML = '<img alt=""><button class="lightbox-close" type="button" aria-label="Close">&times;</button>';
+  box.setAttribute('aria-label', sv ? 'Bildvisare' : 'Image viewer');
+  box.innerHTML = '<img alt=""><button class="lightbox-close" type="button" aria-label="' + (sv ? 'Stäng' : 'Close') + '">&times;</button>';
   document.body.appendChild(box);
 
   var boxImg = box.querySelector('img');

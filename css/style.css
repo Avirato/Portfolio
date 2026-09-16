@@ -176,12 +176,27 @@ a:hover .arrow--right { transform: translateX(3px); }
 .nav-links .nav-cta a { color: var(--accent); }
 .nav-links .nav-cta a:hover { color: var(--accent-hover); }
 
+.nav-links .nav-lang a {
+  display: inline-block;
+  padding: 5px 7px;
+  border: 1px solid var(--line-2);
+  border-radius: 3px;
+  font: 500 11.5px/1 var(--font-mono);
+  letter-spacing: .06em;
+  color: var(--ink-2);
+  transition: border-color .15s, color .15s;
+}
+.nav-links .nav-lang a:hover { border-color: var(--ink-2); color: var(--ink); }
+
 @media (max-width: 600px) {
   .nav-links { gap: 16px; font-size: 13px; }
   .nav-links .nav-optional { display: none; }
 }
 @media (max-width: 440px) {
   .nav-links .nav-wide { display: none; }
+}
+@media (max-width: 380px) {
+  .nav-links .nav-hide-xs { display: none; }
 }
 
 /* ---------- hero (home) ---------- */
