@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goblin Slide – Liam Berg</title>
+<meta name="description" content="En breakdown av grafiken, VFX:en och UI:t i Goblin Slide, ett endless runner-spel gjort och släppt på egen hand i Unity för Android.">
+<meta name="theme-color" content="#0e0e10">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="Goblin Slide – Liam Berg">
+<meta property="og:description" content="En breakdown av grafiken, VFX:en och UI:t i Goblin Slide, ett endless runner-spel gjort och släppt på egen hand i Unity för Android.">
+<meta property="og:image" content="https://avirato.github.io/Portfolio/assets/work/goblin-slide/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://avirato.github.io/Portfolio/work/goblin-slide.html">
+<link rel="alternate" hreflang="sv" href="https://avirato.github.io/Portfolio/sv/work/goblin-slide.html">
+<link rel="alternate" hreflang="x-default" href="https://avirato.github.io/Portfolio/work/goblin-slide.html">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="../../css/style.css?v=4">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+<header class="site-nav is-solid" data-solid>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Liam Berg</a>
+    <nav aria-label="Huvudmeny">
+      <ul class="nav-links">
+        <li><a href="../index.html#work" aria-current="true">Arbete</a></li>
+        <li class="nav-hide-xs"><a href="../index.html#games">Spel</a></li>
+        <li class="nav-wide"><a href="../index.html#youtube">YouTube</a></li>
+        <li class="nav-optional"><a href="../index.html#about">Om mig</a></li>
+        <li class="nav-cta"><a href="../index.html#contact">Kontakt</a></li>
+        <li class="nav-lang"><a href="../../work/goblin-slide.html" hreflang="en" lang="en" aria-label="In English">EN</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <header class="project-head">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#work">← Alla arbeten</a>
+      <p class="eyebrow">Mobilspel · Eget projekt · 2026</p>
+      <h1 class="project-title">Goblin Slide</h1>
+      <div class="project-intro">
+        <div class="project-lede">
+          <p>Ett endless runner-spel där du åker pulka nerför berget, gjort och släppt på egen hand i Unity för Android. Jag har gjort grafiken, VFX:en, UI:t och själva spelet.</p>
+          <p>Allt är byggt av low poly-assets med enkla material så att det går smidigt på mobiler. Här är en genomgång av hur grafiken, effekterna och UI:t kom till.</p>
+        </div>
+        <dl class="facts">
+          <dt>Roll</dt><dd>Eget projekt – grafik, VFX, UI och utveckling</dd>
+          <dt>Motor</dt><dd>Unity 6</dd>
+          <dt>Verktyg</dt><dd>Blender, Affinity, Unity</dd>
+          <dt>Plattform</dt><dd>Android · 1K+ nedladdningar</dd>
+        </dl>
+        <div class="project-links">
+          <a class="btn btn--sm btn--accent" href="https://play.google.com/store/apps/details?id=com.theberg.goblinslide" target="_blank" rel="noopener">Google Play <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-body">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/00-game-shot-1.jpg"><img src="../../assets/work/goblin-slide/00-game-shot-1.jpg" alt="Utskjutningsskärmen: goblinen sitter i en ballista riktad nerför berget" width="506" height="900" fetchpriority="high"></a>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/00-game-shot-2.jpg"><img src="../../assets/work/goblin-slide/00-game-shot-2.jpg" alt="Goblinen åker nerför backen mellan snöiga granar" width="506" height="900" loading="lazy" decoding="async"></a>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/00-game-shot-3.jpg"><img src="../../assets/work/goblin-slide/00-game-shot-3.jpg" alt="Hubben med menypaneler i trä, butik, topplista och uppgraderingar" width="506" height="900" loading="lazy" decoding="async"></a>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Miljö</h2><p>Terrängplattor, set dressing och spåret i snön</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/01-terrain-tiles.jpg"><img src="../../assets/work/goblin-slide/01-terrain-tiles.jpg" alt="Vy i Unity av en rad terrängplattor som bildar banan" width="661" height="983" loading="lazy" decoding="async"></a>
+          <figcaption>Banan byggs av terrängplattor som upprepas</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/20-set-dressed-buildings.mp4" poster="../../assets/work/goblin-slide/20-set-dressed-buildings-poster.jpg" width="432" height="434" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Set dressing, med byggnader från ett färdigt asset pack</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/11-snow-mask-world.jpg"><img src="../../assets/work/goblin-slide/11-snow-mask-world.jpg" alt="Snöig backe uppifrån med mörkare spår där föremål har passerat" width="636" height="648" loading="lazy" decoding="async"></a>
+          <figcaption>Pulkor och props ritar in sig i en mask som avslöjar isen under snön</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/12-snow-mask-texture.jpg"><img src="../../assets/work/goblin-slide/12-snow-mask-texture.jpg" alt="Den svartvita masktexturen i Unity" width="362" height="372" loading="lazy" decoding="async"></a>
+          <figcaption>Render-texturen för masken</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Assets</h2><p>Modellering och texturering i Blender</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/02-assets.jpg"><img src="../../assets/work/goblin-slide/02-assets.jpg" alt="Low poly-isblock, snöklädda stenar, en gran och stockar med runor" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Miljö-assets</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/03-assets-wireframe.jpg"><img src="../../assets/work/goblin-slide/03-assets-wireframe.jpg" alt="Samma assets visade som wireframes" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Wireframes</figcaption>
+        </figure>
+      </div>
+      <div class="grid grid--3">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/25-character-turntable.mp4" poster="../../assets/work/goblin-slide/25-character-turntable-poster.jpg" width="1080" height="1080" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Goblinen, turntable</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/26-ballista-turntable.mp4" poster="../../assets/work/goblin-slide/26-ballista-turntable-poster.jpg" width="1080" height="1080" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Ballistan, turntable</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/27-ballista-turntable-2.mp4" poster="../../assets/work/goblin-slide/27-ballista-turntable-2-poster.jpg" width="1080" height="1080" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Ballistan, turntable</figcaption>
+        </figure>
+      </div>
+      <div class="stack">
+        <figure class="shot shot--narrow">
+          <a class="zoom" href="../../assets/work/goblin-slide/04-ballista-wip.jpg"><img src="../../assets/work/goblin-slide/04-ballista-wip.jpg" alt="Ballistamodell med texturerad bas och otexturerad ovandel" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Ballistan under arbete: texturerad bas, otexturerad ovandel</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>VFX</h2><p>Partiklar och system uppsatta i Unity</p></div>
+
+      <div class="stack">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/21-snow-vfx.mp4" poster="../../assets/work/goblin-slide/21-snow-vfx-poster.jpg" width="1280" height="1148" controls playsinline preload="none"></video>
+          <figcaption>Fallande snöpartiklar</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/22-avalanche-system.mp4" poster="../../assets/work/goblin-slide/22-avalanche-system-poster.jpg" width="1280" height="830" controls playsinline preload="none"></video>
+          <figcaption>Lavinsystemet och dess effekter</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/23-rune-vfx.mp4" poster="../../assets/work/goblin-slide/23-rune-vfx-poster.jpg" width="544" height="712" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Runa att plocka upp</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/24-rune-air-vfx.mp4" poster="../../assets/work/goblin-slide/24-rune-air-vfx-poster.jpg" width="422" height="704" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Runa i luften</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Animation</h2></div>
+
+      <div class="stack">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/28-idle-airborne-landing.mp4" poster="../../assets/work/goblin-slide/28-idle-airborne-landing-poster.jpg" width="1280" height="1082" controls playsinline preload="none"></video>
+          <figcaption>Animationer för idle, luftfärd och landning</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/29-log-grind.mp4" poster="../../assets/work/goblin-slide/29-log-grind-poster.jpg" width="1280" height="452" controls playsinline preload="none"></video>
+          <figcaption>Grindning längs en stock</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Pulkor och kosmetika</h2><p>Pulkor att låsa upp, butiken och kistor</p></div>
+
+      <div class="grid grid--3">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/05-sled-classic.jpg"><img src="../../assets/work/goblin-slide/05-sled-classic.jpg" alt="Klassisk träpulka" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Klassisk pulka</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/06-sled-potato.jpg"><img src="../../assets/work/goblin-slide/06-sled-potato.jpg" alt="Trälåda fylld med potatis" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Potatislåda</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/07-sled-keg.jpg"><img src="../../assets/work/goblin-slide/07-sled-keg.jpg" alt="En halv tunna monterad på medar" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Tunna</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/08-sled-pan.jpg"><img src="../../assets/work/goblin-slide/08-sled-pan.jpg" alt="Stekpanna fylld med mat" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Stekpanna</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/09-sled-drip.jpg"><img src="../../assets/work/goblin-slide/09-sled-drip.jpg" alt="Gyllene pulka dekorerad med ädelstenar" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Drip</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/10-sled-cardboard.jpg"><img src="../../assets/work/goblin-slide/10-sled-cardboard.jpg" alt="Pappkartong som används som pulka" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Pappkartong, skrotad</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/32-cosmetics-page.mp4" poster="../../assets/work/goblin-slide/32-cosmetics-page-poster.jpg" width="882" height="934" controls playsinline preload="none"></video>
+          <figcaption>Kosmetikasidan i spelet</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/33-store-page.mp4" poster="../../assets/work/goblin-slide/33-store-page-poster.jpg" width="1280" height="748" controls playsinline preload="none"></video>
+          <figcaption>Butiken</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/30-chest-open.mp4" poster="../../assets/work/goblin-slide/30-chest-open-poster.jpg" width="486" height="238" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>En kista öppnas</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/31-chest-open-scene.mp4" poster="../../assets/work/goblin-slide/31-chest-open-scene-poster.jpg" width="884" height="812" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Kistans animation i scenen</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>UI</h2><p>Paneler, ikoner och animation</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/13-ui-sheet.jpg"><img src="../../assets/work/goblin-slide/13-ui-sheet.jpg" alt="UI-grafik: träpaneler, skyltar, goblin-ikonen, en butikslåda och en runhastighetsmätare" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Paneler, skyltar och ikoner</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/goblin-slide/14-ui-icons.jpg"><img src="../../assets/work/goblin-slide/14-ui-icons.jpg" alt="UI-ikoner: boost-runor, ädelstenar, mynt, en kista och ett uppgraderingskort" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Valutor, kistor och boosts</figcaption>
+        </figure>
+      </div>
+      <div class="stack">
+        <figure class="shot">
+          <video src="../../assets/work/goblin-slide/34-ui-achievement-bar.mp4" poster="../../assets/work/goblin-slide/34-ui-achievement-bar-poster.jpg" width="1104" height="744" controls playsinline preload="none"></video>
+          <figcaption>Animation av prestationsmätaren</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Fler projekt">
+    <div class="wrap">
+      <a href="casino-environment.html"><small>← Föregående</small><strong>Casino Environment</strong></a>
+      <a href="project-solar.html"><small>Nästa →</small><strong>Project Solar</strong></a>
+    </div>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Liam Berg</span>
+    <span><a href="mailto:liamberg16@gmail.com">liamberg16@gmail.com</a></span>
+  </div>
+</footer>
+
+<script src="../../js/main.js?v=4" defer></script>
+</body>
+</html>

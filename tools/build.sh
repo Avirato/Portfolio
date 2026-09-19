@@ -258,7 +258,7 @@ p_casino() {
   img 13-roulette-chips-color.webp 1920 1080 "$(t 'Textured roulette wheel and chip stacks with wireframe overlay' 'Texturerat roulettehjul och marker med wireframe ovanpå')" "$(t 'Roulette wheel and chips, textured' 'Roulettehjul och marker, texturerade')"
   close_div
 
-  page_foot cgi-integration "CGI Integration" project-solar "Project Solar"
+  page_foot cgi-integration "CGI Integration" goblin-slide "Goblin Slide"
 }
 
 p_solar() {
@@ -304,7 +304,7 @@ p_solar() {
   loop 24-elevator-test 1920 2400 "$(t 'Elevator test' 'Hisstest')" "shot--narrow"
   close_div
 
-  page_foot casino-environment "Casino Environment" waterpark-level "Indoor Waterpark"
+  page_foot goblin-slide "Goblin Slide" waterpark-level "Indoor Waterpark"
 }
 
 p_waterpark() {
@@ -689,12 +689,108 @@ p_cgi() {
   page_foot houdini-simulation "Houdini Simulation" casino-environment "Casino Environment"
 }
 
+p_goblin() {
+  page_head "Goblin Slide" \
+    "$(t 'A breakdown of the art, VFX and UI in Goblin Slide, an endless sled runner made and published solo in Unity for Android.' \
+         'En breakdown av grafiken, VFX:en och UI:t i Goblin Slide, ett endless runner-spel gjort och släppt på egen hand i Unity för Android.')"
+  intro_open "$(t 'Mobile game · Solo project · 2026' 'Mobilspel · Eget projekt · 2026')" "Goblin Slide"
+  lede \
+    "$(t 'An endless downhill sled runner for Android, made and published on my own in Unity. I did the art, the VFX, the UI and the game itself.' \
+         'Ett endless runner-spel där du åker pulka nerför berget, gjort och släppt på egen hand i Unity för Android. Jag har gjort grafiken, VFX:en, UI:t och själva spelet.')" \
+    "$(t 'Everything is built from low-poly assets with simple materials to keep it light on phones. This is a breakdown of how the art, effects and UI came together.' \
+         'Allt är byggt av low poly-assets med enkla material så att det går smidigt på mobiler. Här är en genomgång av hur grafiken, effekterna och UI:t kom till.')"
+  facts \
+    "$(t Role Roll)" "$(t 'Solo project — art, VFX, UI and development' 'Eget projekt – grafik, VFX, UI och utveckling')" \
+    "$(t Engine Motor)" "Unity 6" \
+    "$(t Tools Verktyg)" "Blender, Affinity, Unity" \
+    "$(t Platform Plattform)" "$(t 'Android · 1K+ downloads' 'Android · 1K+ nedladdningar')"
+  links_open
+  link_btn "https://play.google.com/store/apps/details?id=com.theberg.goblinslide" "Google Play" accent
+  links_close
+  intro_close
+
+  open_grid grid--3
+  img 00-game-shot-1.jpg 506 900 "$(t 'Launch screen: the goblin sits in a ballista aimed down the mountain' 'Utskjutningsskärmen: goblinen sitter i en ballista riktad nerför berget')"
+  img 00-game-shot-2.jpg 506 900 "$(t 'The goblin sledding downhill between snowy pine trees' 'Goblinen åker nerför backen mellan snöiga granar')"
+  img 00-game-shot-3.jpg 506 900 "$(t 'The hub with wooden menu panels, shop, leaderboard and upgrades' 'Hubben med menypaneler i trä, butik, topplista och uppgraderingar')"
+  close_div
+
+  block "$(t Environment Miljö)" "$(t 'Terrain tiles, set dressing and the snow trail' 'Terrängplattor, set dressing och spåret i snön')"
+  open_grid
+  img 01-terrain-tiles.jpg 661 983 "$(t 'Unity scene view of a row of terrain tiles forming the run' 'Vy i Unity av en rad terrängplattor som bildar banan')" "$(t 'The run is built from repeating terrain tiles' 'Banan byggs av terrängplattor som upprepas')"
+  loop 20-set-dressed-buildings 432 434 "$(t 'Set dressing, with buildings from an existing asset pack' 'Set dressing, med byggnader från ett färdigt asset pack')"
+  close_div
+  open_grid
+  img 11-snow-mask-world.jpg 636 648 "$(t 'Snowy slope seen from above with darker trails where objects have passed' 'Snöig backe uppifrån med mörkare spår där föremål har passerat')" "$(t 'Sleds and props draw into a mask that reveals ice under the snow' 'Pulkor och props ritar in sig i en mask som avslöjar isen under snön')"
+  img 12-snow-mask-texture.jpg 362 372 "$(t 'The black and white mask render texture in Unity' 'Den svartvita masktexturen i Unity')" "$(t 'The mask render texture' 'Render-texturen för masken')"
+  close_div
+
+  block "Assets" "$(t 'Modeling and texturing in Blender' 'Modellering och texturering i Blender')"
+  open_grid
+  img 02-assets.jpg 1080 1080 "$(t 'Low-poly ice blocks, snow-capped rocks, a pine tree and rune-carved logs' 'Low poly-isblock, snöklädda stenar, en gran och stockar med runor')" "$(t 'Environment assets' 'Miljö-assets')"
+  img 03-assets-wireframe.jpg 1080 1080 "$(t 'The same assets shown as wireframes' 'Samma assets visade som wireframes')" "$(t Wireframes Wireframes)"
+  close_div
+  open_grid grid--3
+  loop 25-character-turntable 1080 1080 "$(t 'Goblin, turntable' 'Goblinen, turntable')"
+  loop 26-ballista-turntable 1080 1080 "$(t 'Ballista, turntable' 'Ballistan, turntable')"
+  loop 27-ballista-turntable-2 1080 1080 "$(t 'Ballista, turntable' 'Ballistan, turntable')"
+  close_div
+  open_stack
+  img 04-ballista-wip.jpg 1080 1080 "$(t 'Ballista model with a textured base and an untextured top' 'Ballistamodell med texturerad bas och otexturerad ovandel')" "$(t 'Ballista in progress: textured base, untextured top' 'Ballistan under arbete: texturerad bas, otexturerad ovandel')" "shot--narrow"
+  close_div
+
+  block "VFX" "$(t 'Particles and systems set up in Unity' 'Partiklar och system uppsatta i Unity')"
+  open_stack
+  vid 21-snow-vfx 1280 1148 "$(t 'Falling snow particles' 'Fallande snöpartiklar')"
+  vid 22-avalanche-system 1280 830 "$(t 'The avalanche system and its effects' 'Lavinsystemet och dess effekter')"
+  close_div
+  open_grid
+  loop 23-rune-vfx 544 712 "$(t 'Rune pickup' 'Runa att plocka upp')"
+  loop 24-rune-air-vfx 422 704 "$(t 'Rune pickup in the air' 'Runa i luften')"
+  close_div
+
+  block "$(t Animation Animation)"
+  open_stack
+  vid 28-idle-airborne-landing 1280 1082 "$(t 'Idle, airborne and landing animations' 'Animationer för idle, luftfärd och landning')"
+  vid 29-log-grind 1280 452 "$(t 'Grinding along a log' 'Grindning längs en stock')"
+  close_div
+
+  block "$(t 'Sleds &amp; cosmetics' 'Pulkor och kosmetika')" "$(t 'Unlockable sleds, the shop and chests' 'Pulkor att låsa upp, butiken och kistor')"
+  open_grid grid--3
+  img 05-sled-classic.jpg 1080 1080 "$(t 'Classic wooden sled' 'Klassisk träpulka')" "$(t 'Classic sled' 'Klassisk pulka')"
+  img 06-sled-potato.jpg 1080 1080 "$(t 'Wooden crate filled with potatoes' 'Trälåda fylld med potatis')" "$(t 'Potato crate' 'Potatislåda')"
+  img 07-sled-keg.jpg 1080 1080 "$(t 'Half a barrel mounted on sled runners' 'En halv tunna monterad på medar')" "$(t Keg Tunna)"
+  img 08-sled-pan.jpg 1080 1080 "$(t 'Frying pan filled with food' 'Stekpanna fylld med mat')" "$(t 'Frying pan' 'Stekpanna')"
+  img 09-sled-drip.jpg 1080 1080 "$(t 'Golden sled decorated with gems' 'Gyllene pulka dekorerad med ädelstenar')" "Drip"
+  img 10-sled-cardboard.jpg 1080 1080 "$(t 'Cardboard box used as a sled' 'Pappkartong som används som pulka')" "$(t 'Cardboard box, scrapped' 'Pappkartong, skrotad')"
+  close_div
+  open_grid
+  vid 32-cosmetics-page 882 934 "$(t 'The cosmetics page in game' 'Kosmetikasidan i spelet')"
+  vid 33-store-page 1280 748 "$(t 'The store' 'Butiken')"
+  close_div
+  open_grid
+  loop 30-chest-open 486 238 "$(t 'Opening a chest' 'En kista öppnas')"
+  loop 31-chest-open-scene 884 812 "$(t 'The chest animation in the scene' 'Kistans animation i scenen')"
+  close_div
+
+  block "UI" "$(t 'Panels, icons and animation' 'Paneler, ikoner och animation')"
+  open_grid
+  img 13-ui-sheet.jpg 1080 1080 "$(t 'UI art: wooden panels, signs, the goblin icon, a shop crate and a rune speedometer' 'UI-grafik: träpaneler, skyltar, goblin-ikonen, en butikslåda och en runhastighetsmätare')" "$(t 'Panels, signs and icons' 'Paneler, skyltar och ikoner')"
+  img 14-ui-icons.jpg 1080 1080 "$(t 'UI icons: boost runes, gems, coins, a chest and an upgrade card' 'UI-ikoner: boost-runor, ädelstenar, mynt, en kista och ett uppgraderingskort')" "$(t 'Currencies, chests and boosts' 'Valutor, kistor och boosts')"
+  close_div
+  open_stack
+  vid 34-ui-achievement-bar 1104 744 "$(t 'Achievement bar animation' 'Animation av prestationsmätaren')"
+  close_div
+
+  page_foot casino-environment "Casino Environment" project-solar "Project Solar"
+}
+
 # ---------------------------------------------------------------------------
 
 for L in en sv; do
   if [ "$L" = sv ]; then OUT=sv/work; R=../..; else OUT=work; R=..; fi
   mkdir -p "$OUT"
-  for entry in casino-environment:p_casino project-solar:p_solar waterpark-level:p_waterpark \
+  for entry in casino-environment:p_casino goblin-slide:p_goblin project-solar:p_solar waterpark-level:p_waterpark \
                souls-like-level:p_souls winter-road:p_winter cyberpunk-music-video:p_cyberpunk \
                death-of-an-explorer:p_explorer procedural-logo-intro:p_logo houdini-simulation:p_houdini \
                cgi-integration:p_cgi; do
