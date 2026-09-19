@@ -38,3 +38,13 @@ assets/youtube/         Miniatyrer för Shorts
 ## Bilder i ett publikt repo
 
 Allt som laddas upp hit blir offentligt och ligger kvar i Git-historiken, även om filen byts ut eller tas bort senare. Vattenmärk därför bilderna innan de läggs in, och spara originalen utanför repot.
+
+## Video till sidan
+
+Klipp från skärminspelningar är oftast för stora, och MKV fungerar inte i webbläsare. `tools/transcode.py` kodar om ett klipp till webbvänlig H.264 (max 1280 px) och plockar ut en posterbild, med Blender som konverterare:
+
+```
+blender -b --factory-startup --python tools/transcode.py -- <infil> assets/work/<projekt> <filnamn-utan-ändelse> 1280
+```
+
+Det skapar `<filnamn>.mp4` och `<filnamn>-poster.jpg`, som `loop`- och `vid`-blocken i `tools/build.sh` använder.
