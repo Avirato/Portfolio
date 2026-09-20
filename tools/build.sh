@@ -715,6 +715,33 @@ p_goblin() {
   img 00-game-shot-3.jpg 506 900 "$(t 'The hub with wooden menu panels, shop, leaderboard and upgrades' 'Hubben med menypaneler i trä, butik, topplista och uppgraderingar')"
   close_div
 
+  block "UI" "$(t 'Panels, icons and animation' 'Paneler, ikoner och animation')"
+  open_grid
+  img 13-ui-sheet.jpg 1080 1080 "$(t 'UI art: wooden panels, signs, the goblin icon, a shop crate and a rune speedometer' 'UI-grafik: träpaneler, skyltar, goblin-ikonen, en butikslåda och en runhastighetsmätare')" "$(t 'Panels, signs and icons' 'Paneler, skyltar och ikoner')"
+  img 14-ui-icons.jpg 1080 1080 "$(t 'UI icons: boost runes, gems, coins, a chest and an upgrade card' 'UI-ikoner: boost-runor, ädelstenar, mynt, en kista och ett uppgraderingskort')" "$(t 'Currencies, chests and boosts' 'Valutor, kistor och boosts')"
+  close_div
+  open_stack
+  vid 34-ui-achievement-bar 1104 744 "$(t 'Achievement bar animation' 'Animation av prestationsmätaren')"
+  close_div
+
+  block "$(t 'Sleds &amp; cosmetics' 'Pulkor och kosmetika')" "$(t 'Unlockable sleds, the shop and chests' 'Pulkor att låsa upp, butiken och kistor')"
+  open_grid grid--3
+  img 05-sled-classic.jpg 1080 1080 "$(t 'Classic wooden sled' 'Klassisk träpulka')" "$(t 'Classic sled' 'Klassisk pulka')"
+  img 06-sled-potato.jpg 1080 1080 "$(t 'Wooden crate filled with potatoes' 'Trälåda fylld med potatis')" "$(t 'Potato crate' 'Potatislåda')"
+  img 07-sled-keg.jpg 1080 1080 "$(t 'Half a barrel mounted on sled runners' 'En halv tunna monterad på medar')" "$(t Keg Tunna)"
+  img 08-sled-pan.jpg 1080 1080 "$(t 'Frying pan filled with food' 'Stekpanna fylld med mat')" "$(t 'Frying pan' 'Stekpanna')"
+  img 09-sled-drip.jpg 1080 1080 "$(t 'Golden sled decorated with gems' 'Gyllene pulka dekorerad med ädelstenar')" "Drip"
+  img 10-sled-cardboard.jpg 1080 1080 "$(t 'Cardboard box used as a sled' 'Pappkartong som används som pulka')" "$(t 'Cardboard box, scrapped' 'Pappkartong, skrotad')"
+  close_div
+  open_grid
+  vid 32-cosmetics-page 882 934 "$(t 'The cosmetics page in game' 'Kosmetikasidan i spelet')"
+  vid 33-store-page 1280 748 "$(t 'The store' 'Butiken')"
+  close_div
+  open_grid
+  loop 30-chest-open 486 238 "$(t 'Opening a chest' 'En kista öppnas')"
+  loop 31-chest-open-scene 884 812 "$(t 'The chest animation in the scene' 'Kistans animation i scenen')"
+  close_div
+
   block "$(t Environment Miljö)" "$(t 'Terrain tiles, set dressing and the snow trail' 'Terrängplattor, set dressing och spåret i snön')"
   open_grid
   img 01-terrain-tiles.jpg 661 983 "$(t 'Unity scene view of a row of terrain tiles forming the run' 'Vy i Unity av en rad terrängplattor som bildar banan')" "$(t 'The run is built from repeating terrain tiles' 'Banan byggs av terrängplattor som upprepas')"
@@ -753,33 +780,6 @@ p_goblin() {
   open_stack
   vid 28-idle-airborne-landing 1280 1082 "$(t 'Idle, airborne and landing animations' 'Animationer för idle, luftfärd och landning')"
   vid 29-log-grind 1280 452 "$(t 'Grinding along a log' 'Grindning längs en stock')"
-  close_div
-
-  block "$(t 'Sleds &amp; cosmetics' 'Pulkor och kosmetika')" "$(t 'Unlockable sleds, the shop and chests' 'Pulkor att låsa upp, butiken och kistor')"
-  open_grid grid--3
-  img 05-sled-classic.jpg 1080 1080 "$(t 'Classic wooden sled' 'Klassisk träpulka')" "$(t 'Classic sled' 'Klassisk pulka')"
-  img 06-sled-potato.jpg 1080 1080 "$(t 'Wooden crate filled with potatoes' 'Trälåda fylld med potatis')" "$(t 'Potato crate' 'Potatislåda')"
-  img 07-sled-keg.jpg 1080 1080 "$(t 'Half a barrel mounted on sled runners' 'En halv tunna monterad på medar')" "$(t Keg Tunna)"
-  img 08-sled-pan.jpg 1080 1080 "$(t 'Frying pan filled with food' 'Stekpanna fylld med mat')" "$(t 'Frying pan' 'Stekpanna')"
-  img 09-sled-drip.jpg 1080 1080 "$(t 'Golden sled decorated with gems' 'Gyllene pulka dekorerad med ädelstenar')" "Drip"
-  img 10-sled-cardboard.jpg 1080 1080 "$(t 'Cardboard box used as a sled' 'Pappkartong som används som pulka')" "$(t 'Cardboard box, scrapped' 'Pappkartong, skrotad')"
-  close_div
-  open_grid
-  vid 32-cosmetics-page 882 934 "$(t 'The cosmetics page in game' 'Kosmetikasidan i spelet')"
-  vid 33-store-page 1280 748 "$(t 'The store' 'Butiken')"
-  close_div
-  open_grid
-  loop 30-chest-open 486 238 "$(t 'Opening a chest' 'En kista öppnas')"
-  loop 31-chest-open-scene 884 812 "$(t 'The chest animation in the scene' 'Kistans animation i scenen')"
-  close_div
-
-  block "UI" "$(t 'Panels, icons and animation' 'Paneler, ikoner och animation')"
-  open_grid
-  img 13-ui-sheet.jpg 1080 1080 "$(t 'UI art: wooden panels, signs, the goblin icon, a shop crate and a rune speedometer' 'UI-grafik: träpaneler, skyltar, goblin-ikonen, en butikslåda och en runhastighetsmätare')" "$(t 'Panels, signs and icons' 'Paneler, skyltar och ikoner')"
-  img 14-ui-icons.jpg 1080 1080 "$(t 'UI icons: boost runes, gems, coins, a chest and an upgrade card' 'UI-ikoner: boost-runor, ädelstenar, mynt, en kista och ett uppgraderingskort')" "$(t 'Currencies, chests and boosts' 'Valutor, kistor och boosts')"
-  close_div
-  open_stack
-  vid 34-ui-achievement-bar 1104 744 "$(t 'Achievement bar animation' 'Animation av prestationsmätaren')"
   close_div
 
   page_foot casino-environment "Casino Environment" project-solar "Project Solar"
