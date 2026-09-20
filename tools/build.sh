@@ -720,6 +720,10 @@ p_goblin() {
   img 13-ui-sheet.jpg 1080 1080 "$(t 'UI art: wooden panels, signs, the goblin icon, a shop crate and a rune speedometer' 'UI-grafik: träpaneler, skyltar, goblin-ikonen, en butikslåda och en runhastighetsmätare')" "$(t 'Panels, signs and icons' 'Paneler, skyltar och ikoner')"
   img 14-ui-icons.jpg 1080 1080 "$(t 'UI icons: boost runes, gems, coins, a chest and an upgrade card' 'UI-ikoner: boost-runor, ädelstenar, mynt, en kista och ett uppgraderingskort')" "$(t 'Currencies, chests and boosts' 'Valutor, kistor och boosts')"
   close_div
+  open_grid
+  img 15-app-icon.jpg 1080 1080 "$(t 'App icon: the green goblin sledding in a potato crate down a snowy slope' 'Appikonen: den gröna goblinen åker pulka i en potatislåda nerför en snöig backe')" "$(t 'App icon' Appikonen)"
+  img 16-coin-scrapped.jpg 1080 1080 "$(t 'Flat gold coin with an envelope symbol' 'Platt guldmynt med en kuvertsymbol')" "$(t 'First version of the coin, scrapped' 'Första versionen av myntet, skrotad')"
+  close_div
   open_stack
   vid 34-ui-achievement-bar 1104 744 "$(t 'Achievement bar animation' 'Animation av prestationsmätaren')"
   close_div
@@ -752,18 +756,19 @@ p_goblin() {
   img 12-snow-mask-texture.jpg 362 372 "$(t 'The black and white mask render texture in Unity' 'Den svartvita masktexturen i Unity')" "$(t 'The mask render texture' 'Render-texturen för masken')"
   close_div
 
-  block "Assets" "$(t 'Modeling and texturing in Blender' 'Modellering och texturering i Blender')"
+  block "Assets" "$(t 'Modeling, rigging and texturing in Blender' 'Modellering, riggning och texturering i Blender')"
   open_grid
   img 02-assets.jpg 1080 1080 "$(t 'Low-poly ice blocks, snow-capped rocks, a pine tree and rune-carved logs' 'Low poly-isblock, snöklädda stenar, en gran och stockar med runor')" "$(t 'Environment assets' 'Miljö-assets')"
   img 03-assets-wireframe.jpg 1080 1080 "$(t 'The same assets shown as wireframes' 'Samma assets visade som wireframes')" "$(t Wireframes Wireframes)"
   close_div
-  open_grid grid--3
+  open_grid
   loop 25-character-turntable 1080 1080 "$(t 'Goblin, turntable' 'Goblinen, turntable')"
-  loop 26-ballista-turntable 1080 1080 "$(t 'Ballista, turntable' 'Ballistan, turntable')"
-  loop 27-ballista-turntable-2 1080 1080 "$(t 'Ballista, turntable' 'Ballistan, turntable')"
+  loop 35-character-rig 1080 1080 "$(t 'The goblin rigged with Rigify' 'Goblinen riggad med Rigify')"
+  loop 26-ballista-turntable 1080 1080 "$(t 'Ballista deformed with shape keys' 'Ballistan deformeras med shape keys')"
+  loop 27-ballista-turntable-2 1080 1080 "$(t 'The same shape keys seen from above' 'Samma shape keys sedda ovanifrån')"
   close_div
   open_stack
-  img 04-ballista-wip.jpg 1080 1080 "$(t 'Ballista model with a textured base and an untextured top' 'Ballistamodell med texturerad bas och otexturerad ovandel')" "$(t 'Ballista in progress: textured base, untextured top' 'Ballistan under arbete: texturerad bas, otexturerad ovandel')" "shot--narrow"
+  img 04-ballista-wip.jpg 1080 1080 "$(t 'Ballista model with a textured base and an untextured top' 'Ballistamodell med texturerad bas och otexturerad ovandel')" "$(t 'First version of the ballista, scrapped' 'Första versionen av ballistan, skrotad')" "shot--narrow"
   close_div
 
   block "VFX" "$(t 'Particles and systems set up in Unity' 'Partiklar och system uppsatta i Unity')"
