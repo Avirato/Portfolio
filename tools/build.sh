@@ -304,7 +304,7 @@ p_solar() {
   loop 24-elevator-test 1920 2400 "$(t 'Elevator test' 'Hisstest')" "shot--narrow"
   close_div
 
-  page_foot goblin-slide "Goblin Slide" waterpark-level "Indoor Waterpark"
+  page_foot idle-golf-range-tycoon "Idle Golf Range Tycoon" waterpark-level "Indoor Waterpark"
 }
 
 p_waterpark() {
@@ -787,7 +787,72 @@ p_goblin() {
   vid 29-log-grind 1280 452 "$(t 'Grinding along a log' 'Grindning längs en stock')"
   close_div
 
-  page_foot casino-environment "Casino Environment" project-solar "Project Solar"
+  page_foot casino-environment "Casino Environment" idle-golf-range-tycoon "Idle Golf Range Tycoon"
+}
+
+p_golf() {
+  page_head "Idle Golf Range Tycoon" \
+    "$(t 'A breakdown of the course, assets, water shader, VFX and UI in Idle Golf Range Tycoon, an idle tycoon made and published solo in Unity for iOS.' \
+         'En breakdown av banan, assetsen, vattenshadern, VFX:en och UI:t i Idle Golf Range Tycoon, ett idle-tycoonspel gjort och släppt på egen hand i Unity för iOS.')"
+  intro_open "$(t 'Mobile game · Solo project · 2026' 'Mobilspel · Eget projekt · 2026')" "Idle Golf Range Tycoon"
+  lede \
+    "$(t 'An idle tycoon for iOS, made and published on my own in Unity: you drive the range cart, sweep up the balls and grow a scruffy driving range into a business that runs itself.' \
+         'Ett idle-tycoonspel för iOS, gjort och släppt på egen hand i Unity: du kör bollplockarbilen, samlar in bollarna och bygger upp en sliten drivingrange till ett företag som sköter sig självt.')" \
+    "$(t 'I did the art, the VFX, the UI and the game itself. Here is how the course, the assets and the effects were built.' \
+         'Jag har gjort grafiken, VFX:en, UI:t och själva spelet. Här är hur banan, assetsen och effekterna byggdes.')"
+  facts \
+    "$(t Role Roll)" "$(t 'Solo project — art, VFX, UI and development' 'Eget projekt – grafik, VFX, UI och utveckling')" \
+    "$(t Engine Motor)" "Unity 6 · URP" \
+    "$(t Tools Verktyg)" "Blender, Affinity, Unity" \
+    "$(t Platform Plattform)" "$(t 'iOS · Released September 2026' 'iOS · Släppt september 2026')"
+  links_open
+  link_btn "https://apps.apple.com/app/idle-golf-range-tycoon/id6808772406" "App Store" accent
+  links_close
+  intro_close
+
+  open_grid grid--3
+  img 00-game-shot-1.jpg 460 995 "$(t 'The range cart collecting balls on the driving range' 'Bollplockarbilen samlar in bollar på drivingrangen')"
+  img 00-game-shot-2.jpg 460 995 "$(t 'The ball washer and the collect pad, with upgrade pads around them' 'Bolltvätten och samlingsplattan, med uppgraderingsplattor runt omkring')"
+  img 00-game-shot-3.jpg 460 995 "$(t 'Upgrade pads for capacity, brush bar and coffee courier next to the cart' 'Uppgraderingsplattor för kapacitet, borstvals och kaffekurir bredvid bilen')"
+  close_div
+
+  block "$(t 'Level design' Leveldesign)" "$(t 'The island course around the driving range' 'Ö-banan runt drivingrangen')"
+  open_stack
+  img 01-level-sideview.jpg 1080 1080 "$(t 'Low-poly golf course of green islands connected by wooden bridges, surrounded by water' 'Low poly-golfbana med gröna öar sammanbundna av träbroar, omgiven av vatten')" "$(t 'Island greens connected by bridges, with the driving range in the middle' 'Öar med greener sammanbundna av broar, med drivingrangen i mitten')"
+  close_div
+  open_grid
+  img 02-level-top.jpg 1080 1080 "$(t 'The course seen from directly above' 'Banan sedd rakt uppifrån')" "$(t 'Top view' Uppifrån)"
+  img 03-level-top-wireframe.jpg 1080 1080 "$(t 'The course from above with the wireframe visible' 'Banan uppifrån med wireframe')" "$(t 'Top view, wireframe' 'Uppifrån, wireframe')"
+  close_div
+
+  block "Assets" "$(t 'Modeled and textured in Blender' 'Modellerade och texturerade i Blender')"
+  open_grid
+  img 04-assets.jpg 1080 1080 "$(t 'Low-poly props: pine trees, bridges, golf carts, a ball washer, benches, a bunker and a pond' 'Low poly-props: granar, broar, golfbilar, en bolltvätt, bänkar, en bunker och en damm')" "$(t 'Course props' 'Props till banan')"
+  img 05-assets-wireframe.jpg 1080 1080 "$(t 'The same props shown as wireframes' 'Samma props visade som wireframes')" "$(t Wireframes Wireframes)"
+  close_div
+
+  block "$(t 'Materials &amp; VFX' 'Material och VFX')" "$(t 'Water shader and particles in Unity' 'Vattenshader och partiklar i Unity')"
+  open_stack
+  img 06-water-material.jpg 1875 751 "$(t 'Unity Shader Graph node network for the animated water' 'Nodträd i Unitys Shader Graph för det animerade vattnet')" "$(t 'The water is a Shader Graph material: a Voronoi pattern scrolling over time, blended between two colours' 'Vattnet är ett Shader Graph-material: ett Voronoi-mönster som rör sig över tid, blandat mellan två färger')"
+  close_div
+  open_grid
+  vid 21-foam-vfx 1018 688 "$(t 'Foam particles for the ball washer' 'Skumpartiklar till bolltvätten')"
+  loop 20-dust-vfx 604 614 "$(t 'Dust when a building is finished' 'Damm när en byggnad blir klar')"
+  close_div
+
+  block "$(t Animation Animation)"
+  open_grid grid--3
+  loop 22-swing-animation 280 308 "$(t 'Golfer swing' 'Golfarens sving')"
+  loop 23-walk-animation 352 360 "$(t 'Walk cycle' Gångcykel)"
+  close_div
+
+  block "UI" "$(t 'Upgrade icons' Uppgraderingsikoner)"
+  open_grid
+  img 07-ui-upgrades-1.jpg 1080 1080 "$(t 'Upgrade icons: cart speed, tee bay level, brush bar and an extra green' 'Uppgraderingsikoner: hastighet på bilen, nivå på utslagsplatsen, borstvals och en extra green')" "$(t 'Upgrade icons' Uppgraderingsikoner)"
+  img 08-ui-upgrades-2.jpg 1080 1080 "$(t 'Upgrade icons: ball magnet, coffee robot, ball dispenser and collector robot' 'Uppgraderingsikoner: bollmagnet, kafferobot, bollautomat och plockarrobot')" "$(t 'More upgrade icons' 'Fler uppgraderingsikoner')"
+  close_div
+
+  page_foot goblin-slide "Goblin Slide" project-solar "Project Solar"
 }
 
 # ---------------------------------------------------------------------------
@@ -795,7 +860,7 @@ p_goblin() {
 for L in en sv; do
   if [ "$L" = sv ]; then OUT=sv/work; R=../..; else OUT=work; R=..; fi
   mkdir -p "$OUT"
-  for entry in casino-environment:p_casino goblin-slide:p_goblin project-solar:p_solar waterpark-level:p_waterpark \
+  for entry in casino-environment:p_casino goblin-slide:p_goblin idle-golf-range-tycoon:p_golf project-solar:p_solar waterpark-level:p_waterpark \
                souls-like-level:p_souls winter-road:p_winter cyberpunk-music-video:p_cyberpunk \
                death-of-an-explorer:p_explorer procedural-logo-intro:p_logo houdini-simulation:p_houdini \
                cgi-integration:p_cgi; do

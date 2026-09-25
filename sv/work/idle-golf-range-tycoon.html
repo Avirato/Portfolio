@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idle Golf Range Tycoon – Liam Berg</title>
+<meta name="description" content="En breakdown av banan, assetsen, vattenshadern, VFX:en och UI:t i Idle Golf Range Tycoon, ett idle-tycoonspel gjort och släppt på egen hand i Unity för iOS.">
+<meta name="theme-color" content="#0e0e10">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="Idle Golf Range Tycoon – Liam Berg">
+<meta property="og:description" content="En breakdown av banan, assetsen, vattenshadern, VFX:en och UI:t i Idle Golf Range Tycoon, ett idle-tycoonspel gjort och släppt på egen hand i Unity för iOS.">
+<meta property="og:image" content="https://avirato.github.io/Portfolio/assets/work/idle-golf-range-tycoon/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://avirato.github.io/Portfolio/work/idle-golf-range-tycoon.html">
+<link rel="alternate" hreflang="sv" href="https://avirato.github.io/Portfolio/sv/work/idle-golf-range-tycoon.html">
+<link rel="alternate" hreflang="x-default" href="https://avirato.github.io/Portfolio/work/idle-golf-range-tycoon.html">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="../../css/style.css?v=4">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+<header class="site-nav is-solid" data-solid>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Liam Berg</a>
+    <nav aria-label="Huvudmeny">
+      <ul class="nav-links">
+        <li><a href="../index.html#work" aria-current="true">Arbete</a></li>
+        <li class="nav-hide-xs"><a href="../index.html#games">Spel</a></li>
+        <li class="nav-wide"><a href="../index.html#youtube">YouTube</a></li>
+        <li class="nav-optional"><a href="../index.html#about">Om mig</a></li>
+        <li class="nav-cta"><a href="../index.html#contact">Kontakt</a></li>
+        <li class="nav-lang"><a href="../../work/idle-golf-range-tycoon.html" hreflang="en" lang="en" aria-label="In English">EN</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <header class="project-head">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#work">← Alla arbeten</a>
+      <p class="eyebrow">Mobilspel · Eget projekt · 2026</p>
+      <h1 class="project-title">Idle Golf Range Tycoon</h1>
+      <div class="project-intro">
+        <div class="project-lede">
+          <p>Ett idle-tycoonspel för iOS, gjort och släppt på egen hand i Unity: du kör bollplockarbilen, samlar in bollarna och bygger upp en sliten drivingrange till ett företag som sköter sig självt.</p>
+          <p>Jag har gjort grafiken, VFX:en, UI:t och själva spelet. Här är hur banan, assetsen och effekterna byggdes.</p>
+        </div>
+        <dl class="facts">
+          <dt>Roll</dt><dd>Eget projekt – grafik, VFX, UI och utveckling</dd>
+          <dt>Motor</dt><dd>Unity 6 · URP</dd>
+          <dt>Verktyg</dt><dd>Blender, Affinity, Unity</dd>
+          <dt>Plattform</dt><dd>iOS · Släppt september 2026</dd>
+        </dl>
+        <div class="project-links">
+          <a class="btn btn--sm btn--accent" href="https://apps.apple.com/app/idle-golf-range-tycoon/id6808772406" target="_blank" rel="noopener">App Store <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-body">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/00-game-shot-1.jpg"><img src="../../assets/work/idle-golf-range-tycoon/00-game-shot-1.jpg" alt="Bollplockarbilen samlar in bollar på drivingrangen" width="460" height="995" fetchpriority="high"></a>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/00-game-shot-2.jpg"><img src="../../assets/work/idle-golf-range-tycoon/00-game-shot-2.jpg" alt="Bolltvätten och samlingsplattan, med uppgraderingsplattor runt omkring" width="460" height="995" loading="lazy" decoding="async"></a>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/00-game-shot-3.jpg"><img src="../../assets/work/idle-golf-range-tycoon/00-game-shot-3.jpg" alt="Uppgraderingsplattor för kapacitet, borstvals och kaffekurir bredvid bilen" width="460" height="995" loading="lazy" decoding="async"></a>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Leveldesign</h2><p>Ö-banan runt drivingrangen</p></div>
+
+      <div class="stack">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/01-level-sideview.jpg"><img src="../../assets/work/idle-golf-range-tycoon/01-level-sideview.jpg" alt="Low poly-golfbana med gröna öar sammanbundna av träbroar, omgiven av vatten" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Öar med greener sammanbundna av broar, med drivingrangen i mitten</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/02-level-top.jpg"><img src="../../assets/work/idle-golf-range-tycoon/02-level-top.jpg" alt="Banan sedd rakt uppifrån" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Uppifrån</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/03-level-top-wireframe.jpg"><img src="../../assets/work/idle-golf-range-tycoon/03-level-top-wireframe.jpg" alt="Banan uppifrån med wireframe" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Uppifrån, wireframe</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Assets</h2><p>Modellerade och texturerade i Blender</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/04-assets.jpg"><img src="../../assets/work/idle-golf-range-tycoon/04-assets.jpg" alt="Low poly-props: granar, broar, golfbilar, en bolltvätt, bänkar, en bunker och en damm" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Props till banan</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/05-assets-wireframe.jpg"><img src="../../assets/work/idle-golf-range-tycoon/05-assets-wireframe.jpg" alt="Samma props visade som wireframes" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Wireframes</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Material och VFX</h2><p>Vattenshader och partiklar i Unity</p></div>
+
+      <div class="stack">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/06-water-material.jpg"><img src="../../assets/work/idle-golf-range-tycoon/06-water-material.jpg" alt="Nodträd i Unitys Shader Graph för det animerade vattnet" width="1875" height="751" loading="lazy" decoding="async"></a>
+          <figcaption>Vattnet är ett Shader Graph-material: ett Voronoi-mönster som rör sig över tid, blandat mellan två färger</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <video src="../../assets/work/idle-golf-range-tycoon/21-foam-vfx.mp4" poster="../../assets/work/idle-golf-range-tycoon/21-foam-vfx-poster.jpg" width="1018" height="688" controls playsinline preload="none"></video>
+          <figcaption>Skumpartiklar till bolltvätten</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/idle-golf-range-tycoon/20-dust-vfx.mp4" poster="../../assets/work/idle-golf-range-tycoon/20-dust-vfx-poster.jpg" width="604" height="614" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Damm när en byggnad blir klar</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Animation</h2></div>
+
+      <div class="grid grid--3">
+        <figure class="shot">
+          <video src="../../assets/work/idle-golf-range-tycoon/22-swing-animation.mp4" poster="../../assets/work/idle-golf-range-tycoon/22-swing-animation-poster.jpg" width="280" height="308" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Golfarens sving</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../../assets/work/idle-golf-range-tycoon/23-walk-animation.mp4" poster="../../assets/work/idle-golf-range-tycoon/23-walk-animation-poster.jpg" width="352" height="360" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Gångcykel</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>UI</h2><p>Uppgraderingsikoner</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/07-ui-upgrades-1.jpg"><img src="../../assets/work/idle-golf-range-tycoon/07-ui-upgrades-1.jpg" alt="Uppgraderingsikoner: hastighet på bilen, nivå på utslagsplatsen, borstvals och en extra green" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Uppgraderingsikoner</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../../assets/work/idle-golf-range-tycoon/08-ui-upgrades-2.jpg"><img src="../../assets/work/idle-golf-range-tycoon/08-ui-upgrades-2.jpg" alt="Uppgraderingsikoner: bollmagnet, kafferobot, bollautomat och plockarrobot" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Fler uppgraderingsikoner</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="Fler projekt">
+    <div class="wrap">
+      <a href="goblin-slide.html"><small>← Föregående</small><strong>Goblin Slide</strong></a>
+      <a href="project-solar.html"><small>Nästa →</small><strong>Project Solar</strong></a>
+    </div>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Liam Berg</span>
+    <span><a href="mailto:liamberg16@gmail.com">liamberg16@gmail.com</a></span>
+  </div>
+</footer>
+
+<script src="../../js/main.js?v=4" defer></script>
+</body>
+</html>

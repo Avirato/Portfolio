@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Idle Golf Range Tycoon — Liam Berg</title>
+<meta name="description" content="A breakdown of the course, assets, water shader, VFX and UI in Idle Golf Range Tycoon, an idle tycoon made and published solo in Unity for iOS.">
+<meta name="theme-color" content="#0e0e10">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Idle Golf Range Tycoon — Liam Berg">
+<meta property="og:description" content="A breakdown of the course, assets, water shader, VFX and UI in Idle Golf Range Tycoon, an idle tycoon made and published solo in Unity for iOS.">
+<meta property="og:image" content="https://avirato.github.io/Portfolio/assets/work/idle-golf-range-tycoon/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://avirato.github.io/Portfolio/work/idle-golf-range-tycoon.html">
+<link rel="alternate" hreflang="sv" href="https://avirato.github.io/Portfolio/sv/work/idle-golf-range-tycoon.html">
+<link rel="alternate" hreflang="x-default" href="https://avirato.github.io/Portfolio/work/idle-golf-range-tycoon.html">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="../css/style.css?v=4">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-nav is-solid" data-solid>
+  <div class="wrap">
+    <a class="brand" href="../index.html">Liam Berg</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="../index.html#work" aria-current="true">Work</a></li>
+        <li class="nav-hide-xs"><a href="../index.html#games">Games</a></li>
+        <li class="nav-wide"><a href="../index.html#youtube">YouTube</a></li>
+        <li class="nav-optional"><a href="../index.html#about">About</a></li>
+        <li class="nav-cta"><a href="../index.html#contact">Contact</a></li>
+        <li class="nav-lang"><a href="../sv/work/idle-golf-range-tycoon.html" hreflang="sv" lang="sv" aria-label="På svenska">SV</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <header class="project-head">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#work">← All work</a>
+      <p class="eyebrow">Mobile game · Solo project · 2026</p>
+      <h1 class="project-title">Idle Golf Range Tycoon</h1>
+      <div class="project-intro">
+        <div class="project-lede">
+          <p>An idle tycoon for iOS, made and published on my own in Unity: you drive the range cart, sweep up the balls and grow a scruffy driving range into a business that runs itself.</p>
+          <p>I did the art, the VFX, the UI and the game itself. Here is how the course, the assets and the effects were built.</p>
+        </div>
+        <dl class="facts">
+          <dt>Role</dt><dd>Solo project — art, VFX, UI and development</dd>
+          <dt>Engine</dt><dd>Unity 6 · URP</dd>
+          <dt>Tools</dt><dd>Blender, Affinity, Unity</dd>
+          <dt>Platform</dt><dd>iOS · Released September 2026</dd>
+        </dl>
+        <div class="project-links">
+          <a class="btn btn--sm btn--accent" href="https://apps.apple.com/app/idle-golf-range-tycoon/id6808772406" target="_blank" rel="noopener">App Store <span class="arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="project-body">
+    <div class="wrap">
+      <div class="grid grid--3">
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/00-game-shot-1.jpg"><img src="../assets/work/idle-golf-range-tycoon/00-game-shot-1.jpg" alt="The range cart collecting balls on the driving range" width="460" height="995" fetchpriority="high"></a>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/00-game-shot-2.jpg"><img src="../assets/work/idle-golf-range-tycoon/00-game-shot-2.jpg" alt="The ball washer and the collect pad, with upgrade pads around them" width="460" height="995" loading="lazy" decoding="async"></a>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/00-game-shot-3.jpg"><img src="../assets/work/idle-golf-range-tycoon/00-game-shot-3.jpg" alt="Upgrade pads for capacity, brush bar and coffee courier next to the cart" width="460" height="995" loading="lazy" decoding="async"></a>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Level design</h2><p>The island course around the driving range</p></div>
+
+      <div class="stack">
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/01-level-sideview.jpg"><img src="../assets/work/idle-golf-range-tycoon/01-level-sideview.jpg" alt="Low-poly golf course of green islands connected by wooden bridges, surrounded by water" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Island greens connected by bridges, with the driving range in the middle</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/02-level-top.jpg"><img src="../assets/work/idle-golf-range-tycoon/02-level-top.jpg" alt="The course seen from directly above" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Top view</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/03-level-top-wireframe.jpg"><img src="../assets/work/idle-golf-range-tycoon/03-level-top-wireframe.jpg" alt="The course from above with the wireframe visible" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Top view, wireframe</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Assets</h2><p>Modeled and textured in Blender</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/04-assets.jpg"><img src="../assets/work/idle-golf-range-tycoon/04-assets.jpg" alt="Low-poly props: pine trees, bridges, golf carts, a ball washer, benches, a bunker and a pond" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Course props</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/05-assets-wireframe.jpg"><img src="../assets/work/idle-golf-range-tycoon/05-assets-wireframe.jpg" alt="The same props shown as wireframes" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Wireframes</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Materials &amp; VFX</h2><p>Water shader and particles in Unity</p></div>
+
+      <div class="stack">
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/06-water-material.jpg"><img src="../assets/work/idle-golf-range-tycoon/06-water-material.jpg" alt="Unity Shader Graph node network for the animated water" width="1875" height="751" loading="lazy" decoding="async"></a>
+          <figcaption>The water is a Shader Graph material: a Voronoi pattern scrolling over time, blended between two colours</figcaption>
+        </figure>
+      </div>
+      <div class="grid">
+        <figure class="shot">
+          <video src="../assets/work/idle-golf-range-tycoon/21-foam-vfx.mp4" poster="../assets/work/idle-golf-range-tycoon/21-foam-vfx-poster.jpg" width="1018" height="688" controls playsinline preload="none"></video>
+          <figcaption>Foam particles for the ball washer</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../assets/work/idle-golf-range-tycoon/20-dust-vfx.mp4" poster="../assets/work/idle-golf-range-tycoon/20-dust-vfx-poster.jpg" width="604" height="614" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Dust when a building is finished</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>Animation</h2></div>
+
+      <div class="grid grid--3">
+        <figure class="shot">
+          <video src="../assets/work/idle-golf-range-tycoon/22-swing-animation.mp4" poster="../assets/work/idle-golf-range-tycoon/22-swing-animation-poster.jpg" width="280" height="308" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Golfer swing</figcaption>
+        </figure>
+        <figure class="shot">
+          <video src="../assets/work/idle-golf-range-tycoon/23-walk-animation.mp4" poster="../assets/work/idle-golf-range-tycoon/23-walk-animation-poster.jpg" width="352" height="360" muted loop playsinline preload="none" data-loop></video>
+          <figcaption>Walk cycle</figcaption>
+        </figure>
+      </div>
+
+      <div class="block-title"><h2>UI</h2><p>Upgrade icons</p></div>
+
+      <div class="grid">
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/07-ui-upgrades-1.jpg"><img src="../assets/work/idle-golf-range-tycoon/07-ui-upgrades-1.jpg" alt="Upgrade icons: cart speed, tee bay level, brush bar and an extra green" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>Upgrade icons</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/08-ui-upgrades-2.jpg"><img src="../assets/work/idle-golf-range-tycoon/08-ui-upgrades-2.jpg" alt="Upgrade icons: ball magnet, coffee robot, ball dispenser and collector robot" width="1080" height="1080" loading="lazy" decoding="async"></a>
+          <figcaption>More upgrade icons</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <nav class="pager" aria-label="More projects">
+    <div class="wrap">
+      <a href="goblin-slide.html"><small>← Previous</small><strong>Goblin Slide</strong></a>
+      <a href="project-solar.html"><small>Next →</small><strong>Project Solar</strong></a>
+    </div>
+  </nav>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Liam Berg</span>
+    <span><a href="mailto:liamberg16@gmail.com">liamberg16@gmail.com</a></span>
+  </div>
+</footer>
+
+<script src="../js/main.js?v=4" defer></script>
+</body>
+</html>
