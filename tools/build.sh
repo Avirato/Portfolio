@@ -846,10 +846,11 @@ p_golf() {
   loop 23-walk-animation 352 360 "$(t 'Walk cycle' Gångcykel)"
   close_div
 
-  block "UI" "$(t 'Upgrade icons' Uppgraderingsikoner)"
-  open_grid
+  block "UI" "$(t 'Icons for upgrades and the studio logo' 'Ikoner för uppgraderingar och studiologgan')"
+  open_grid grid--3
   img 07-ui-upgrades-1.jpg 1080 1080 "$(t 'Upgrade icons: cart speed, tee bay level, brush bar and an extra green' 'Uppgraderingsikoner: hastighet på bilen, nivå på utslagsplatsen, borstvals och en extra green')" "$(t 'Upgrade icons' Uppgraderingsikoner)"
   img 08-ui-upgrades-2.jpg 1080 1080 "$(t 'Upgrade icons: ball magnet, coffee robot, ball dispenser and collector robot' 'Uppgraderingsikoner: bollmagnet, kafferobot, bollautomat och plockarrobot')" "$(t 'More upgrade icons' 'Fler uppgraderingsikoner')"
+  img 09-ui-upgrades-3.jpg 1080 1080 "$(t 'Green goblin studio logo, a collector robot with a ball basket, a cart with a plus symbol and an outlined capacity icon' 'Studiologga med en grön goblin, en plockarrobot med bollkorg, en bil med ett plustecken och en konturikon för kapacitet')" "$(t 'The studio logo shown when the game opens, the collector robot and two upgrade icons' 'Studiologgan som visas när spelet startar, plockarroboten och två uppgraderingsikoner')"
   close_div
 
   page_foot goblin-slide "Goblin Slide" project-solar "Project Solar"
