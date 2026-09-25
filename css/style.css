@@ -580,6 +580,8 @@ a:hover .arrow--right { transform: translateX(3px); }
 .shot img, .shot video { width: 100%; }
 .shot--narrow { max-width: 560px; margin-inline: auto; }
 .shot figcaption { margin-top: 10px; font: 12.5px/1.5 var(--font-mono); color: var(--ink-3); }
+
+.body-text { max-width: 62ch; margin-bottom: clamp(20px, 2.4vw, 28px); color: var(--ink-2); }
 .shot figcaption b { font-weight: 500; color: var(--ink-2); }
 
 .zoom { cursor: zoom-in; }

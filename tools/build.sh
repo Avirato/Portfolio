@@ -10,7 +10,7 @@
 # The two home pages (index.html and sv/index.html) are edited by hand.
 set -eo pipefail
 
-V=4                                          # bump when css/style.css or js/main.js change (also in both index.html files)
+V=5                                          # bump when css/style.css or js/main.js change (also in both index.html files)
 SITE='https://avirato.github.io/Portfolio'
 FONTS='https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap'
 
@@ -200,6 +200,9 @@ block() {
   local sub="${2:-}"
   printf '\n      <div class="block-title"><h2>%s</h2>%s</div>\n\n' "$1" "${sub:+<p>$sub</p>}"
 }
+
+# text "Paragraph"   (a short explanation between the blocks)
+text() { printf '      <p class="body-text">%s</p>\n\n' "$1"; }
 
 open_stack() { printf '      <div class="stack">\n'; }
 open_grid()  { printf '      <div class="grid%s">\n' "${1:+ $1}"; }
@@ -817,18 +820,24 @@ p_golf() {
   close_div
 
   block "$(t 'Level design' Leveldesign)" "$(t 'The island course around the driving range' 'Ö-banan runt drivingrangen')"
+  text "$(t 'I started by drawing the islands in 2D from a top view, exported the drawing as an SVG and imported it into Blender. There I lowered the resolution of the curves, converted them to meshes, UV mapped them and textured the course in Substance Painter.' \
+           'Jag började med att rita öarna i 2D uppifrån, gjorde om ritningen till SVG och importerade den till Blender. Där drog jag ner upplösningen på kurvorna, gjorde om dem till mesh, UV-mappade dem och texturerade banan i Substance Painter.')"
   open_stack
   img 01-level-sideview.jpg 1080 1080 "$(t 'Low-poly golf course of green islands connected by wooden bridges, surrounded by water' 'Low poly-golfbana med gröna öar sammanbundna av träbroar, omgiven av vatten')" "$(t 'Island greens connected by bridges, with the driving range in the middle' 'Öar med greener sammanbundna av broar, med drivingrangen i mitten')"
   close_div
-  open_grid
+  open_grid grid--3
   img 02-level-top.jpg 1080 1080 "$(t 'The course seen from directly above' 'Banan sedd rakt uppifrån')" "$(t 'Top view' Uppifrån)"
   img 03-level-top-wireframe.jpg 1080 1080 "$(t 'The course from above with the wireframe visible' 'Banan uppifrån med wireframe')" "$(t 'Top view, wireframe' 'Uppifrån, wireframe')"
+  img 10-course-texture.jpg 1024 1024 "$(t 'Texture map of the golf islands: green fairways with lighter greens and yellow bunkers' 'Texturkarta över golföarna: gröna fairways med ljusare greener och gula bunkrar')" "$(t 'The course texture, painted in Substance Painter' 'Banans textur, målad i Substance Painter')"
   close_div
 
   block "Assets" "$(t 'Modeled and textured in Blender' 'Modellerade och texturerade i Blender')"
-  open_grid
+  text "$(t "Everything except the course shares a single material: one texture of colour swatches that every asset's UVs point into, which keeps the whole scene down to very few materials. I didn't make that swatch texture myself." \
+           'Allt utom banan delar ett enda material: en textur med färgrutor som alla assets UV:er pekar in i, vilket håller hela scenen nere på väldigt få material. Själva färgtexturen har jag inte gjort.')"
+  open_grid grid--3
   img 04-assets.jpg 1080 1080 "$(t 'Low-poly props: pine trees, bridges, golf carts, a ball washer, benches, a bunker and a pond' 'Low poly-props: granar, broar, golfbilar, en bolltvätt, bänkar, en bunker och en damm')" "$(t 'Course props' 'Props till banan')"
   img 05-assets-wireframe.jpg 1080 1080 "$(t 'The same props shown as wireframes' 'Samma props visade som wireframes')" "$(t Wireframes Wireframes)"
+  img 11-color-atlas.jpg 1024 1024 "$(t 'Grid of colour swatches used as a shared texture atlas' 'Rutnät med färgrutor som används som gemensam texturatlas')" "$(t 'The colour atlas every other asset samples from (not made by me)' 'Färgatlasen som alla andra assets hämtar färg ur (inte gjord av mig)')"
   close_div
 
   block "$(t 'Materials &amp; VFX' 'Material och VFX')" "$(t 'Water shader and particles in Unity' 'Vattenshader och partiklar i Unity')"

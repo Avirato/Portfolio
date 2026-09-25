@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
-<link rel="stylesheet" href="../css/style.css?v=4">
+<link rel="stylesheet" href="../css/style.css?v=5">
 </head>
 <body>
 
@@ -82,13 +82,15 @@
 
       <div class="block-title"><h2>Level design</h2><p>The island course around the driving range</p></div>
 
+      <p class="body-text">I started by drawing the islands in 2D from a top view, exported the drawing as an SVG and imported it into Blender. There I lowered the resolution of the curves, converted them to meshes, UV mapped them and textured the course in Substance Painter.</p>
+
       <div class="stack">
         <figure class="shot">
           <a class="zoom" href="../assets/work/idle-golf-range-tycoon/01-level-sideview.jpg"><img src="../assets/work/idle-golf-range-tycoon/01-level-sideview.jpg" alt="Low-poly golf course of green islands connected by wooden bridges, surrounded by water" width="1080" height="1080" loading="lazy" decoding="async"></a>
           <figcaption>Island greens connected by bridges, with the driving range in the middle</figcaption>
         </figure>
       </div>
-      <div class="grid">
+      <div class="grid grid--3">
         <figure class="shot">
           <a class="zoom" href="../assets/work/idle-golf-range-tycoon/02-level-top.jpg"><img src="../assets/work/idle-golf-range-tycoon/02-level-top.jpg" alt="The course seen from directly above" width="1080" height="1080" loading="lazy" decoding="async"></a>
           <figcaption>Top view</figcaption>
@@ -97,11 +99,17 @@
           <a class="zoom" href="../assets/work/idle-golf-range-tycoon/03-level-top-wireframe.jpg"><img src="../assets/work/idle-golf-range-tycoon/03-level-top-wireframe.jpg" alt="The course from above with the wireframe visible" width="1080" height="1080" loading="lazy" decoding="async"></a>
           <figcaption>Top view, wireframe</figcaption>
         </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/10-course-texture.jpg"><img src="../assets/work/idle-golf-range-tycoon/10-course-texture.jpg" alt="Texture map of the golf islands: green fairways with lighter greens and yellow bunkers" width="1024" height="1024" loading="lazy" decoding="async"></a>
+          <figcaption>The course texture, painted in Substance Painter</figcaption>
+        </figure>
       </div>
 
       <div class="block-title"><h2>Assets</h2><p>Modeled and textured in Blender</p></div>
 
-      <div class="grid">
+      <p class="body-text">Everything except the course shares a single material: one texture of colour swatches that every asset's UVs point into, which keeps the whole scene down to very few materials. I didn't make that swatch texture myself.</p>
+
+      <div class="grid grid--3">
         <figure class="shot">
           <a class="zoom" href="../assets/work/idle-golf-range-tycoon/04-assets.jpg"><img src="../assets/work/idle-golf-range-tycoon/04-assets.jpg" alt="Low-poly props: pine trees, bridges, golf carts, a ball washer, benches, a bunker and a pond" width="1080" height="1080" loading="lazy" decoding="async"></a>
           <figcaption>Course props</figcaption>
@@ -109,6 +117,10 @@
         <figure class="shot">
           <a class="zoom" href="../assets/work/idle-golf-range-tycoon/05-assets-wireframe.jpg"><img src="../assets/work/idle-golf-range-tycoon/05-assets-wireframe.jpg" alt="The same props shown as wireframes" width="1080" height="1080" loading="lazy" decoding="async"></a>
           <figcaption>Wireframes</figcaption>
+        </figure>
+        <figure class="shot">
+          <a class="zoom" href="../assets/work/idle-golf-range-tycoon/11-color-atlas.jpg"><img src="../assets/work/idle-golf-range-tycoon/11-color-atlas.jpg" alt="Grid of colour swatches used as a shared texture atlas" width="1024" height="1024" loading="lazy" decoding="async"></a>
+          <figcaption>The colour atlas every other asset samples from (not made by me)</figcaption>
         </figure>
       </div>
 
@@ -180,6 +192,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=4" defer></script>
+<script src="../js/main.js?v=5" defer></script>
 </body>
 </html>
