@@ -837,7 +837,7 @@ p_golf() {
   open_grid grid--3
   img 04-assets.jpg 1080 1080 "$(t 'Low-poly props: pine trees, bridges, golf carts, a ball washer, benches, a bunker and a pond' 'Low poly-props: granar, broar, golfbilar, en bolltvätt, bänkar, en bunker och en damm')" "$(t 'Course props' 'Props till banan')"
   img 05-assets-wireframe.jpg 1080 1080 "$(t 'The same props shown as wireframes' 'Samma props visade som wireframes')" "$(t Wireframes Wireframes)"
-  img 11-color-atlas.jpg 1024 1024 "$(t 'Grid of colour swatches used as a shared texture atlas' 'Rutnät med färgrutor som används som gemensam texturatlas')" "$(t 'The colour atlas every other asset samples from (not made by me)' 'Färgatlasen som alla andra assets hämtar färg ur (inte gjord av mig)')"
+  img 11-color-atlas-wm.jpg 1080 1080"$(t 'Grid of colour swatches used as a shared texture atlas' 'Rutnät med färgrutor som används som gemensam texturatlas')" "$(t 'The colour atlas every other asset samples from (not made by me)' 'Färgatlasen som alla andra assets hämtar färg ur (inte gjord av mig)')"
   close_div
 
   block "$(t 'Materials &amp; VFX' 'Material och VFX')" "$(t 'Water shader and particles in Unity' 'Vattenshader och partiklar i Unity')"
