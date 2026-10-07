@@ -10,7 +10,7 @@
 # The two home pages (index.html and sv/index.html) are edited by hand.
 set -eo pipefail
 
-V=5                                          # bump when css/style.css or js/main.js change (also in both index.html files)
+V=6                                          # bump when css/style.css or js/main.js change (also in both index.html files)
 SITE='https://avirato.github.io/Portfolio'
 FONTS='https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap'
 
@@ -64,7 +64,6 @@ page_head() {
       <ul class="nav-links">
         <li><a href="../index.html#work" aria-current="true">$(t Work Arbete)</a></li>
         <li class="nav-hide-xs"><a href="../index.html#games">$(t Games Spel)</a></li>
-        <li class="nav-wide"><a href="../index.html#youtube">YouTube</a></li>
         <li class="nav-optional"><a href="../index.html#about">$(t About 'Om mig')</a></li>
         <li class="nav-cta"><a href="../index.html#contact">$(t Contact Kontakt)</a></li>
         <li class="nav-lang"><a href="$other" hreflang="$other_lang" lang="$other_lang" aria-label="$other_label">${other_lang^^}</a></li>
